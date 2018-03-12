@@ -53,7 +53,7 @@
               </li>
             </ul>
             <div class="post-content-inner mt-20">
-              <p>ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
+              <p><%= @post_image.caption %></p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@
                     <div class="comment-avatar">
                       <div class="avatar">
                         <!-- <img src="images/sample-author1.jpg"> -->
-                        <%= image_tag('sample-author1.jpg', style: "width: 60px; height: 60px;") %>
+                        <%= attachment_image_tag post_comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
                       </div>
                     </div>
                     <div class="comment-text">
